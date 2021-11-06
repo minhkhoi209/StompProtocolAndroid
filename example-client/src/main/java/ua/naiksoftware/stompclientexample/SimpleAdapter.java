@@ -46,7 +46,7 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.SimpleView
 
         public SimpleViewHolder(View itemView) {
             super(itemView);
-            mTextView = (TextView) itemView.findViewById(R.id.text);
+            mTextView = itemView.findViewById(R.id.text);
         }
     }
 }

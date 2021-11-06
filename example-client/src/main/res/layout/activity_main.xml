@@ -11,6 +11,46 @@
         style="?android:buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_host"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="WS Host (ex: ws://some-host:8080/ws)" />
+
+        <EditText
+            android:id="@+id/edit_authToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Auth token"
+            android:minHeight="48dp"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edit_send_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="WS Send channel"
+            android:minHeight="48dp"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edit_msg_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="WS Send channel"
+            android:minHeight="48dp"
+            android:textColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
@@ -42,23 +82,25 @@
         style="?android:buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Text message to send"
+            android:text="Hello server from Android client"
+            android:minHeight="100dp"
+            android:textColor="@color/colorPrimary" />
 
         <Button
             style="?android:buttonBarButtonStyle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/send_mode_1"
+            android:text="@string/send_msg"
             android:onClick="sendEchoViaStomp"/>
 
-        <Button
-            style="?android:buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/send_mode_2"
-            android:onClick="sendEchoViaRest"/>
 
     </LinearLayout>
 
